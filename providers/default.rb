@@ -162,6 +162,7 @@ action :dump do
     action :nothing
   end
 
+<<<<<<< HEAD
   # set_owner
   execute "set owner on #{new_resource.path}" do
     command "/bin/chown -R #{new_resource.owner}:#{new_resource.group} #{new_resource.path}"
