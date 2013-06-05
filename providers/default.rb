@@ -179,7 +179,6 @@ action :dump do
     action :nothing
   end
 
-<<<<<<< HEAD
   # set_owner
   execute "set owner on #{new_resource.path}" do
     command "/bin/chown -R #{new_resource.owner}:#{new_resource.group} #{new_resource.path}"
@@ -192,8 +191,6 @@ end
 #####################
 action :cherry_pick do
   set_cherry_pick_paths
-
-  Chef::Log.debug("DEBUG: new_resource.file #{new_resource.file}")
 
   directory new_resource.path do
     recursive true
