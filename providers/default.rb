@@ -1,4 +1,4 @@
-#
+
 # Cookbook Name:: ark
 # Provider:: Ark
 #
@@ -134,7 +134,7 @@ action :put do
   # symlink binaries
   new_resource.has_binaries.each do |bin|
     link ::File.join(new_resource.prefix_bin, ::File.basename(bin)) do
-      to ::File.join(new_resource.path, ::File.basename(bin))
+      to ::File.join(new_resource.path, bin)
     end
   end
 
